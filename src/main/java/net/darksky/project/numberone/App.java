@@ -17,17 +17,14 @@ public class App {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println(
 				"Welcome to my Forecast application.\r\n" + "Please provide your current latitude and longtitude:");
-		// ReadAFile readAFile = new ReadAFile("welcome.properties");
 		CreateForecast createForecast = new CreateForecast();
 		EnterInput enterInput = new EnterInput();
-
-		// readAFile.readWords();
 		createForecast.setLatitude(enterInput.getLatitude());
 		createForecast.setLongitude(enterInput.getLongitude());
 		createForecast.setAPIKey("462aefd9f99c6cda185c40262313a9d7");
 
 		ForecastRequest forecastRequest = new ForecastRequestBuilder().key(createForecast.getAPIKey())
-				.location(createForecast.getGeoCoordinates()).language(Language.ru).build();
+				.location(createForecast.getGeoCoordinates()).language(Language.az).build();
 		DarkSkyJacksonClient darkSkyJacksonClient = new DarkSkyJacksonClient();
 		Forecast forecast = darkSkyJacksonClient.forecast(forecastRequest);
 		System.out.println("Now, you will get the forecast");

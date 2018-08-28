@@ -34,8 +34,8 @@ public class CreateForecast {
 		return this.longitude;
 	}
 	
-	public void setAPIKey(String apikey) {
-		this.apiKey = new APIKey(apikey);
+	public void setAPIKey(String apiKey) {
+		this.apiKey = new APIKey(apiKey);
 	}
 	public APIKey getAPIKey() {
 		return this.apiKey;
