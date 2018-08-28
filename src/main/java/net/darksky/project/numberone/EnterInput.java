@@ -9,7 +9,7 @@ public class EnterInput {
 
 	public double getLatitude() {
 		this.latitude = scanner.nextDouble();
-		if (latitude < 90 && latitude > 90) {
+		if (latitude < -90 && latitude > 90) {
 			throw new IllegalArgumentException("provide a latitude between 0 and 90");
 		} else {
 			return this.latitude;
@@ -18,7 +18,7 @@ public class EnterInput {
 
 	public double getLongitude() {
 		this.longitude = scanner.nextDouble();
-		if (longitude < 90 && longitude > 90) {
+		if (longitude < -180 && longitude > 180) {
 			throw new IllegalArgumentException("provide a latitude between 0 and 90");
 		} else {
 			return this.longitude;
