@@ -14,7 +14,6 @@ import tk.plogitech.darksky.forecast.model.Forecast;
 
 public class App {
 	public static void main(String[] args) throws IOException, ForecastException {
-		Scanner scanner = new Scanner(System.in);
 		System.out.println(
 				"Welcome to my Forecast application.\r\n" + "Please provide your current latitude and longtitude:");
 		CreateForecast createForecast = new CreateForecast();
@@ -28,7 +27,6 @@ public class App {
 		DarkSkyJacksonClient darkSkyJacksonClient = new DarkSkyJacksonClient();
 		Forecast forecast = darkSkyJacksonClient.forecast(forecastRequest);
 		System.out.println("Now, you will get the forecast");
-		// readAFile.readRemainingWords();
 		System.out.println("the current weather is: " + forecast.getCurrently().getSummary());
 		System.out.println("daily weather is: " + forecast.getDaily().getSummary());
 		System.out.println("hourly weather is: " + forecast.getHourly().getSummary());
